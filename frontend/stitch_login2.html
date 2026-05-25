@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masuk - E-Internship Dishub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "primary-fixed": "#dce1ff",
+                "on-primary-fixed": "#001551",
+                "tertiary-fixed-dim": "#c4c7c9",
+                "tertiary-container": "#595c5e",
+                "surface-container-highest": "#e2e1ed",
+                "surface": "#faf8ff",
+                "on-tertiary-fixed-variant": "#444749",
+                "on-tertiary-container": "#d2d4d6",
+                "surface-container-low": "#f3f2fe",
+                "on-primary-fixed-variant": "#0039b5",
+                "surface-container-high": "#e8e7f3",
+                "primary-fixed-dim": "#b7c4ff",
+                "on-primary": "#ffffff",
+                "outline-variant": "#c4c5d7",
+                "on-surface": "#1a1b23",
+                "surface-bright": "#faf8ff",
+                "on-error-container": "#93000a",
+                "surface-variant": "#e2e1ed",
+                "primary": "#0037b0",
+                "surface-tint": "#2151da",
+                "secondary-container": "#d0e1fb",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#b7c8e1",
+                "on-primary-container": "#cad3ff",
+                "on-error": "#ffffff",
+                "on-background": "#1a1b23",
+                "inverse-primary": "#b7c4ff",
+                "on-secondary-container": "#54647a",
+                "tertiary-fixed": "#e0e3e5",
+                "secondary-fixed": "#d3e4fe",
+                "outline": "#747686",
+                "on-surface-variant": "#434655",
+                "tertiary": "#414546",
+                "surface-dim": "#d9d9e5",
+                "error": "#ba1a1a",
+                "secondary": "#505f76",
+                "inverse-on-surface": "#f0f0fb",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed": "#191c1e",
+                "inverse-surface": "#2e3039",
+                "error-container": "#ffdad6",
+                "on-secondary-fixed": "#0b1c30",
+                "surface-container": "#ededf9",
+                "primary-container": "#1d4ed8",
+                "background": "#faf8ff",
+                "on-secondary-fixed-variant": "#38485d",
+                "on-tertiary": "#ffffff"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-desktop": "2rem",
+                "stack-sm": "0.5rem",
+                "stack-xs": "0.25rem",
+                "container-max": "1280px",
+                "stack-xl": "2.5rem",
+                "stack-lg": "1.5rem",
+                "stack-md": "1rem",
+                "gutter": "1.5rem",
+                "margin-mobile": "1rem"
+        },
+        "fontFamily": {
+                "label-md": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "display-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-sm": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "label-sm": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "60px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "500"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        /* Form Input Base Styles */
+        .input-field {
+            width: 100%;
+            height: 44px;
+            padding: 0 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--tw-colors-outline-variant, #c4c5d7);
+            background-color: transparent;
+            color: var(--tw-colors-on-surface, #1a1b23);
+            transition: all 0.2s ease;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: var(--tw-colors-primary, #0037b0);
+            box-shadow: 0 0 0 1px var(--tw-colors-primary, #0037b0);
+        }
+        
+        .tab-active {
+            border-bottom-width: 2px;
+            border-color: var(--tw-colors-primary, #0037b0);
+            color: var(--tw-colors-primary, #0037b0);
+            font-weight: 600;
+        }
+        .tab-inactive {
+            border-bottom-width: 2px;
+            border-color: transparent;
+            color: var(--tw-colors-on-surface-variant, #434655);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex relative overflow-x-hidden">
+<!-- Left Side Image -->
+<div class="hidden lg:block lg:w-1/2 relative bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFp7zg_2kGKjPxvVs1iq6j7ybPHpiT3zmV0fhW35PnDP-Mb2GClDSUPA4MS2_r4m6mQljANzhIAICZPeb-Zl96Q7g055J2nPNf8ChZHMU8NiYGk8dwqits2C4fTItv1LSGckYpbs_S4C2PPAEkj8QctvpC1TwI940KvEes8bGdiJEJPtPyqf_8TKQNE13PccxSSpsO4e_4qJGqudPb4MMXg4dyQca0iPfsZASk3T25HzR26p3NxrUTouWeIgRFXztN4DByVPM9LrE');">
+<div class="absolute inset-0 bg-primary/50"></div>
+</div>
+<!-- Right Side Content -->
+<div class="w-full lg:w-1/2 flex items-center justify-center p-margin-mobile lg:p-margin-desktop bg-surface-container-lowest">
+<!-- Main Card Container -->
+<main class="w-full max-w-[480px] z-10 bg-surface-container-lowest rounded-xl overflow-hidden flex flex-col">
+<!-- Header / Branding -->
+<div class="px-stack-md pt-stack-xl pb-stack-md flex flex-col items-center justify-center text-center">
+<div class="flex items-center justify-center gap-4 mb-stack-md">
+<img alt="Logo Dinas Perhubungan" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCME3WHZH4eI6H1bKZ__cc64N-JUtLnTlkffRIoUq8xmnb4-lZl00IbKEsc1qXOSj-ojBPscK_tfFPp72LfHWxuTTF7psnQSwVxoCyV80tAOaG__bojHONK-nhC3Wi4J3pbAS--h8N2eoLyLrcG3B7Zls2w82Xn3DevwBneByOPAVIBspLYQ2XPMyuM5eoago0XcXL_nfsjaWJstdGQg57svBiTmWEuJ8gDhFnrZ3H0X96sZ-LNI9J43y6TKePLBkzJXQZZkLX8ac0"/>
+<img alt="Logo Dishub Surabaya" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaTQGre1sH5C4WcwF8xJY000hAkbjBVO-WicCWICUAmc6TbSWRxWe_7QSxo8eA2mb0jVjZZXXX9aary7QztfmGSakJpRUrVFu32Mib_nHK-dr0NcUH_Ir6vXSbTafbOlDl35XHp2854LbHd7aVX1H5mGJN5VOV3SSQjxBYq7WTwxIYdot0irn6TdSz8P-JiifIETMa7Iu2YdvoKGkbiQSDev4-3UdPfK0QAtqunArnIR9hFeXYohSafUBn9pyuF35wnAllUI6Y69k"/>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface mb-1">E-Internship Dishub</h1>
+<p class="font-body-md text-sm text-on-surface-variant">Portal Magang Dinas Perhubungan Kota Surabaya</p>
+</div>
+<!-- Tabs Navigation -->
+<div class="flex w-full border-b border-outline-variant px-stack-md">
+<button class="flex-1 pb-3 pt-2 text-center tab-active font-label-md text-label-md transition-colors duration-200 focus:outline-none" id="btn-login">
+                Masuk
+            </button>
+<button class="flex-1 pb-3 pt-2 text-center tab-inactive font-label-md text-label-md transition-colors duration-200 hover:text-primary focus:outline-none" id="btn-register">
+                Daftar
+            </button>
+</div>
+<!-- Forms Container -->
+<div class="p-stack-md flex-1 relative min-h-[380px]">
+<!-- Login Form -->
+<form class="flex flex-col gap-stack-md absolute inset-0 p-stack-md w-full transition-opacity duration-300 opacity-100 z-10" id="form-login">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="login-email">Alamat Email</label>
+<input class="input-field font-body-md text-body-md" id="login-email" placeholder="Masukkan email Anda" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="login-password">Kata Sandi</label>
+<div class="relative">
+<input class="input-field font-body-md text-body-md pr-10" id="login-password" placeholder="Masukkan kata sandi Anda" required="" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline-variant hover:text-on-surface-variant focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</button>
+</div>
+</div>
+<div class="flex justify-end mt-[-8px]">
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">Lupa Kata Sandi?</a>
+</div>
+<button class="mt-stack-sm w-full h-[44px] bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-primary outline-none" type="submit">
+                    Masuk
+                </button>
+</form>
+<!-- Register Form -->
+<form class="flex flex-col gap-stack-md absolute inset-0 p-stack-md w-full transition-opacity duration-300 opacity-0 pointer-events-none z-0 overflow-y-auto" id="form-register">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="reg-name">Nama Lengkap</label>
+<input class="input-field font-body-md text-body-md" id="reg-name" placeholder="Nama Anda" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="reg-email">Alamat Email</label>
+<input class="input-field font-body-md text-body-md" id="reg-email" placeholder="email@contoh.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="reg-type">Jenis Pendaftar</label>
+<select class="input-field font-body-md text-body-md appearance-none bg-surface-container-lowest" id="reg-type" required="">
+<option disabled="" selected="" value="">Pilih jenis pendaftar</option>
+<option value="siswa">Siswa SLTA</option>
+<option value="mahasiswa">Mahasiswa</option>
+<option value="fresh">Fresh Graduate</option>
+<option value="instansi">Instansi/Perseorangan</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="reg-institution">Nama Institusi</label>
+<input class="input-field font-body-md text-body-md" id="reg-institution" placeholder="Nama Universitas / Sekolah" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="reg-phone">Nomor Telepon</label>
+<input class="input-field font-body-md text-body-md" id="reg-phone" placeholder="+62 812..." required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="reg-password">Kata Sandi</label>
+<input class="input-field font-body-md text-body-md" id="reg-password" placeholder="Buat kata sandi" required="" type="password"/>
+</div>
+<button class="mt-stack-sm w-full h-[44px] bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-primary outline-none" type="submit">
+                    Buat Akun
+                </button>
+</form>
+</div>
+</main>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnLogin = document.getElementById('btn-login');
+            const btnRegister = document.getElementById('btn-register');
+            const formLogin = document.getElementById('form-login');
+            const formRegister = document.getElementById('form-register');
+
+            function switchTab(tab) {
+                if (tab === 'login') {
+                    // Update buttons
+                    btnLogin.classList.replace('tab-inactive', 'tab-active');
+                    btnRegister.classList.replace('tab-active', 'tab-inactive');
+                    
+                    // Update forms
+                    formLogin.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+                    formLogin.classList.add('opacity-100', 'z-10');
+                    
+                    formRegister.classList.remove('opacity-100', 'z-10');
+                    formRegister.classList.add('opacity-0', 'pointer-events-none', 'z-0');
+                } else {
+                    // Update buttons
+                    btnRegister.classList.replace('tab-inactive', 'tab-active');
+                    btnLogin.classList.replace('tab-active', 'tab-inactive');
+                    
+                    // Update forms
+                    formRegister.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+                    formRegister.classList.add('opacity-100', 'z-10');
+                    
+                    formLogin.classList.remove('opacity-100', 'z-10');
+                    formLogin.classList.add('opacity-0', 'pointer-events-none', 'z-0');
+                }
+            }
+
+            btnLogin.addEventListener('click', () => switchTab('login'));
+            btnRegister.addEventListener('click', () => switchTab('register'));
+        });
+    </script>
+</body></html>
